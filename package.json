@@ -1,12 +1,27 @@
 {
   "name": "connectwise_todoist",
   "version": "1.0.0",
-  "description": "Integration between Connectwise and Todoist",
+  "description": "Integration between ConnectWise Manage and Todoist",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "test"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "npx tsc --watch",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.60.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "@types/supertest": "^7.2.0",
+    "supertest": "^7.2.2",
+    "typescript": "^6.0.2",
+    "vitest": "^3.2.4"
   }
 }
